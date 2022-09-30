@@ -47,6 +47,10 @@ x-backend: &backend
 services:
   runner:
     <<: *backend
+    command: /bin/sh
+
+  rails:
+    <<: *backend
     command: bundle exec rails
 
   web:
