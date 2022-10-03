@@ -32,7 +32,8 @@ x-backend: &backend
     REDIS_URL: redis://redis:6379/
     WEBPACKER_DEV_SERVER_HOST: webpacker
     MALLOC_ARENA_MAX: 2
-    WEB_CONCURRENCY: ${WEB_CONCURRENCY:-1}
+    WEB_CONCURRENCY: ${WEB_CONCURRENCY:-0}
+    LOGRAGE_IN_DEVELOPMENT: ${LOGRAGE_IN_DEVELOPMENT:-false}
     BOOTSNAP_CACHE_DIR: /usr/local/bundle/_bootsnap
     XDG_DATA_HOME: /app/tmp/caches
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
@@ -50,11 +51,11 @@ services:
 
   rails:
     <<: *backend
-    command: bundle exec rails
+    command: bin/rails
 
   web:
     <<: *backend
-    command: bundle exec rails server -b 0.0.0.0
+    command: bin/run
     ports:
       - '3000:3000'
     depends_on:

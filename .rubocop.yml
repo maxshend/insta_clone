@@ -12,10 +12,12 @@ AllCops:
     - db/seeds.rb
     - db/migrate/*
     - node_modules/**/*
-    - bin/*
 
 Style/Documentation:
   Enabled: false
 
 Rails/FilePath:
   Enabled: false
+
+Metrics/MethodLength:
+  Max: 50
