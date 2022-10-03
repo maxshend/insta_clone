@@ -54,6 +54,9 @@ yarn-debug.log*
 # dotenv, dotenv-rails
 .env
 
+# .env.*.local files for local secrets
+.env.*.local
+
 # Test and coverage files
 /coverage/
 /spec/tmp
