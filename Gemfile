@@ -50,8 +50,20 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# A simple ruby authentication solution.
+gem 'authlogic', '~> 6.4.2'
+
 # Custom Rails logger with one-line-per-event format
 gem 'lograge'
+
+# Provides an ability to model business workflows and run them
+gem 'trailblazer-activity', '~> 0.14.0'
+
+# Provides the Contract::Validate() macro
+gem 'trailblazer-macro-contract', '~> 2.1.3'
+
+# Validation library with type-safe schemas and rules
+gem 'dry-validation', '~> 1.8.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
