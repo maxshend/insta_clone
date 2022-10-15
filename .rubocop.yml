@@ -21,3 +21,6 @@ Rails/FilePath:
 
 Metrics/MethodLength:
   Max: 50
+
+RSpec/NestedGroups:
+  Max: 5

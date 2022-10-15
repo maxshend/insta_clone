@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
+require 'database_cleaner/active_record'
+
 RSpec.configure do |config|
+  DatabaseCleaner.url_allowlist = [%r{^postgres://postgres:postgres@postgres}]
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
