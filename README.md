@@ -1,4 +1,4 @@
-# INSTA CLONE
+# ORGANIZER APP
 
 Just an app to try things out.
 
