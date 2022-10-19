@@ -68,6 +68,12 @@ gem 'dry-validation', '~> 1.8.1'
 # Scrypt password hashing algorithm
 gem 'scrypt'
 
+# Slim template language
+gem 'slim-rails', '~> 3.5.1'
+
+# DSL for HTML forms
+gem 'simple_form', '~> 5.1.0'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]

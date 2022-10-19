@@ -16,6 +16,9 @@ AllCops:
 Style/Documentation:
   Enabled: false
 
+Style/Lambda:
+  Enabled: false
+
 Rails/FilePath:
   Enabled: false
 
