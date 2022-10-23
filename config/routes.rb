@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :user_sessions, only: %i[new create destroy]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get 'sign_in', to: 'user_sessions#new'
 end

@@ -38,10 +38,13 @@ x-backend: &backend
     XDG_DATA_HOME: /app/tmp/caches
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
     EDITOR: nano
+    SELENIUM_HOST: chrome
   depends_on: &backend_depends_on
     postgres:
       condition: service_healthy
     redis:
+      condition: service_healthy
+    chrome:
       condition: service_healthy
 
 services:
@@ -109,6 +112,16 @@ services:
       <<: *env
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
       YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
+
+  chrome:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - '4444:4444'
+    healthcheck:
+      test: /opt/bin/check-grid.sh --host 0.0.0.0 --port 4444
+      interval: 5s
+      timeout: 10s
+      retries: 5
 
 volumes:
   bundle:

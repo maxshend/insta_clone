@@ -124,4 +124,8 @@ group :test do
 
   # Profilers for tests
   gem 'test-prof'
+
+  # E2E testing
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
