@@ -1,0 +1,8 @@
+= simple_form_for user_session, html: { class: 'form' } do |f|
+  - if user_session.errors.any?
+    .error-message = user_session.errors.full_messages.to_sentence.capitalize
+
+  = f.input :email, input_html: { autofocus: true }
+  = f.input :password
+
+  = f.submit class: 'btn btn--secondary'

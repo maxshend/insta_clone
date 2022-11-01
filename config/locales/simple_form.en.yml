@@ -1,2 +1,15 @@
 en:
   simple_form:
+    placeholders:
+      user_session:
+        email: Email
+        password: Password
+    labels:
+      user_session:
+        email: Email
+        password: Password
+        remember_me: Remember Me
+  helpers:
+    submit:
+      user_session:
+        create: Sign In
