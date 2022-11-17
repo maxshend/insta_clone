@@ -47,8 +47,9 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+# Image processing
+gem 'image_processing', '~> 1.2'
+gem 'ruby-vips', '~> 2.1.4'
 
 # A simple ruby authentication solution.
 gem 'authlogic', '~> 6.4.2'
