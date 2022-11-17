@@ -5,6 +5,8 @@ class User < ApplicationRecord
     c.crypto_provider = ::Authlogic::CryptoProviders::SCrypt
   end
 
+  has_many :pages, dependent: :destroy
+
   validates :email,
             uniqueness: { case_sensitive: false, if: :will_save_change_to_email? },
             email: true
