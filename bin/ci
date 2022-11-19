@@ -6,7 +6,7 @@ echo "[ bin/ci ] Running rubocop"
 bundle exec rubocop
 
 echo "[ bin/ci ] Running specs"
-bundle exec rspec spec
+RAILS_ENV=test bundle exec rspec spec
 
 echo "[ bin/ci ] Analyzing code for security vulnerabilities."
 echo "[ bin/ci ] Output will be in tmp/brakeman.html, which can be opened in your browser."

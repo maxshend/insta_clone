@@ -5,6 +5,11 @@ FactoryBot.define do
     title { 'MyString' }
     description { 'MyString' }
     cover { nil }
-    user { nil }
+    user { association :user }
+    parent { nil }
+
+    trait :with_parent do
+      parent { association :page }
+    end
   end
 end

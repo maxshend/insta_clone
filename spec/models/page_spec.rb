@@ -13,6 +13,8 @@ RSpec.describe Page, type: :model do
     specify(:aggregate_failures) do
       expect(page).to belong_to :user
       expect(page).to have_one_attached :cover
+      expect(page).to belong_to(:parent).class_name('Page').optional
+      expect(page).to have_many(:sub_pages).class_name('Page').dependent(:destroy).inverse_of(:parent)
     end
   end
 end
