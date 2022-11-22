@@ -8,5 +8,6 @@ FactoryBot.define do
     active { true }
     approved { true }
     confirmed { true }
+    role { :client }
   end
 end

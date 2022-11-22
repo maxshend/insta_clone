@@ -7,6 +7,13 @@ class User < ApplicationRecord
 
   has_many :pages, dependent: :destroy
 
+  enum role: {
+    client: 0,
+    analyst: 1,
+    admin: 2
+  }
+
+  validates :role, presence: true
   validates :email,
             uniqueness: { case_sensitive: false, if: :will_save_change_to_email? },
             email: true

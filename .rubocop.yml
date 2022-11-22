@@ -27,3 +27,6 @@ Metrics/MethodLength:
 
 RSpec/NestedGroups:
   Max: 5
+
+RSpec/ExampleLength:
+  Enabled: false

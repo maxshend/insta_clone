@@ -5,6 +5,15 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   subject(:user) { build :user }
 
+  specify(:aggregate_failures) do
+    expect(user).to validate_presence_of :role
+    expect(user).to define_enum_for(:role).with_values(
+      client: 0,
+      analyst: 1,
+      admin: 2
+    )
+  end
+
   describe 'validations' do
     context 'with valid attributes' do
       it { is_expected.to be_valid }
