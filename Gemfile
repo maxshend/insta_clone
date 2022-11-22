@@ -53,6 +53,8 @@ gem 'ruby-vips', '~> 2.1.4'
 
 # A simple ruby authentication solution.
 gem 'authlogic', '~> 6.4.2'
+# Authorization
+gem 'pundit', '~> 2.2.0'
 
 # Custom Rails logger with one-line-per-event format
 gem 'lograge'
