@@ -1,4 +1,4 @@
-= simple_form_for user_session, html: { class: 'form' } do |f|
+= simple_form_for user_session, html: { class: 'form stack' } do |f|
   - if user_session.errors.any?
     .error-message = user_session.errors.full_messages.to_sentence.capitalize
 

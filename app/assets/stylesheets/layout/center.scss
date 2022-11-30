@@ -1,0 +1,14 @@
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  padding-inline-start: var(--space-l);
+  padding-inline-end: var(--space-l);
+
+  &_sign-in {
+    margin-inline: 20%;
+
+    @include media(tabletAndUp) {
+      margin-inline: 35%;
+    }
+  }
+}
