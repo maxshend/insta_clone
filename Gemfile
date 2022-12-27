@@ -66,7 +66,7 @@ gem 'trailblazer-activity', '~> 0.14.0'
 gem 'trailblazer-macro-contract', '~> 2.1.3'
 
 # Validation library with type-safe schemas and rules
-gem 'dry-validation', '~> 1.8.1'
+gem 'dry-validation', '~> 1.10.0'
 
 # Scrypt password hashing algorithm
 gem 'scrypt'

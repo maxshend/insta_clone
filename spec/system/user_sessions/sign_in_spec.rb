@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Sign in', type: :system do
+RSpec.describe 'Sign in' do
   let(:title) { 'Sign In' }
 
   before do

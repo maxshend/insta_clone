@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  subject(:user) { build :user }
+RSpec.describe User do
+  subject(:user) { build(:user) }
 
   specify(:aggregate_failures) do
     expect(user).to validate_presence_of :role
@@ -29,7 +29,7 @@ RSpec.describe User, type: :model do
       end
 
       context 'with duplicated value' do
-        let!(:another_user) { create :user }
+        let!(:another_user) { create(:user) }
         let(:email) { another_user.email }
 
         it { is_expected.not_to be_valid }

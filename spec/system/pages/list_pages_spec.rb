@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'List pages', type: :system do
+RSpec.describe 'List pages' do
   let(:sign_in_title) { 'Sign In' }
 
   context 'when authenticated' do
@@ -12,7 +12,7 @@ RSpec.describe 'List pages', type: :system do
 
     include_context 'when user authenticated'
 
-    let_it_be(:user_page) { create :page, user: current_user }
+    let_it_be(:user_page) { create(:page, user: current_user) }
 
     specify(:aggregate_failures) do
       expect(page).to have_content(user_page.title)

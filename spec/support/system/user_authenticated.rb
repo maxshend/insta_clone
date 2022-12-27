@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.shared_context 'when user authenticated' do
   let_it_be(:pswd) { 'password123' }
-  let_it_be(:current_user) { create :user, password: pswd, password_confirmation: pswd }
+  let_it_be(:current_user) { create(:user, password: pswd, password_confirmation: pswd) }
 
   before do
     visit new_user_session_path
