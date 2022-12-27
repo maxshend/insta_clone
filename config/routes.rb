@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resource :dashboard, only: %i[show]
+  resources :pages, only: %i[index]
   resources :user_sessions, only: %i[new create destroy]
 
-  root to: 'dashboard#show'
+  root to: 'pages#index'
 
   get 'sign_in', to: 'user_sessions#new'
 end

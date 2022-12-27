@@ -39,6 +39,7 @@ x-backend: &backend
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
     EDITOR: nano
     SELENIUM_HOST: chrome
+    SELENIUM_PORT: 4444
   depends_on: &backend_depends_on
     postgres:
       condition: service_healthy

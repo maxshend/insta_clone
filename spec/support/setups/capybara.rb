@@ -12,7 +12,7 @@ Capybara.register_driver :chrome_headless do |app|
 
   Capybara::Selenium::Driver.new(
     app,
-    url: "http://#{ENV.fetch('SELENIUM_HOST')}:4444/wd/hub",
+    url: "http://#{ENV.fetch('SELENIUM_HOST')}:#{ENV.fetch('SELENIUM_PORT')}/wd/hub",
     browser: :remote,
     options:
   )

@@ -18,4 +18,10 @@ class ApplicationController < ActionController::Base
 
     @current_user = current_user_session&.user
   end
+
+  def check_user_session
+    return if current_user_session
+
+    redirect_to new_user_session_path
+  end
 end
